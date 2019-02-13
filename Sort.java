@@ -7,6 +7,17 @@ class Main
     void sort(double arr[], long start, long end) 
     { 
       // sort the array here
+       int n = arr.length; 
+        for (int i=1; i<n; i++) { 
+            double a = arr[i]; 
+            int b = i-1; 
+ 
+            while (b>=0 && arr[b] > a) { 
+                arr[b+1] = arr[b]; 
+                b = b-1; 
+            } 
+            arr[b+1] = a; 
+        } 
     } 
 
   
@@ -18,7 +29,7 @@ class Main
         System.out.println(Arrays.toString(arr));
         
         // create a sorted version to test.
-        double sortedArr[] = arr;
+        double sortedArr[] = arr.clone();
         Arrays.sort(sortedArr);
         System.out.println("sorted array: "); 
         System.out.println(Arrays.toString(sortedArr));
