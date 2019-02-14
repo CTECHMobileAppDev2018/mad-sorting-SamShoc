@@ -8,16 +8,16 @@ class Main
     { 
       // sort the array here
        int n = arr.length; 
-        for (int i=1; i<n; i++) { 
-            double a = arr[i]; 
-            int b = i-1; 
+       for (int i=1; i<n; i++) { 
+         double a = arr[i]; 
+          int x = i-1; 
  
-            while (b>=0 && arr[b] > a) { 
-                arr[b+1] = arr[b]; 
-                b = b-1; 
-            } 
-            arr[b+1] = a; 
-        } 
+          while (x>=0 && arr[x] > a) { 
+              arr[x+1] = arr[x]; 
+              x = x-1; 
+           } 
+           arr[x+1] = a; 
+      } 
     } 
 
   
